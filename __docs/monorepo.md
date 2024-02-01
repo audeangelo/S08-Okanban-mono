@@ -85,3 +85,27 @@ pour mettre à jour le front, il faut build à chaque fois.
 > ```
 
 ## Une dernière chose…
+
+On est d'accord, qu'on ne connait pas l'URL du futur site :
+
+- okanban.io
+- okanban.fr
+
+Côté front, dans `api.js`, on appelle cette URL, comment fait-on ?  
+→ les variables d'environnement !
+
+SAUF qu'on est côté client… On a pas accès à `process.env`…  
+Heureusement que Vite sait les gérer !!!  
+→ <https://vitejs.dev/guide/env-and-mode>
+
+```text
+# file .env
+VITE_API_BASE_URL=http://localhost:3000
+```
+
+> on doit préfixer par `VITE_` pour l'exposer au front
+
+```js
+// @file api.js
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+```
