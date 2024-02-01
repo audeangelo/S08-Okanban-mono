@@ -60,3 +60,28 @@ On va aussi devoir **fusionner** certains fichiers :
 >   (vite, bulma-toast)
 
 → on teste le _build_
+
+## On fait tout fonctionner
+
+On peut maintenant demander à Express de servir le dossier
+statique `build`.
+
+Désormais, on a plus qu'une seule adresse :
+celle du serveur Express.
+
+→ on teste <http://localhost:3000>
+
+On note que si on modifie le code du front,
+on a pas le _hot reloading_ et pire encore :
+même le reload ne fonctionne pas !
+
+Et oui, Express sert du **statiquement le dossier `build`**,
+pour mettre à jour le front, il faut build à chaque fois.
+
+> **ASTUCE** on peut ajouter un script dans le `package.json`
+>
+> ```json
+> "build:watch": "vite build --watch"
+> ```
+
+## Une dernière chose…

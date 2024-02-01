@@ -9,6 +9,7 @@
 
     "front:dev": "vite",
     "front:build": "vite build",
+    "front:build:watch": "vite build --watch",
     "front:preview": "vite preview",
 
     "sq:create": "node ./data/createTables.js",
