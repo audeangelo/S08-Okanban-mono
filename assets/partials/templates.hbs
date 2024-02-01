@@ -1,0 +1,45 @@
+<!-- Template pour une liste -->
+<template id="list-template">
+  <section class="message is-info" slot="list-id">
+    <div class="message-header">
+      <div class="list-name is-clickable" slot="list-name"></div>
+
+      <div>
+        <!-- pour éditer une liste, on pense ACCESSIBILITÉ :
+        j'ajoute une icône « crayon » -->
+        <span class="icon is-clickable" slot="edit-list-button">
+          <i class="fas fa-pencil-alt"></i>
+          <span class="sr-only">Éditer la liste</span>
+        </span>
+
+        <span class="icon is-clickable" slot="add-card-button">
+          <i class="fas fa-plus"></i>
+          <span class="sr-only">Ajouter une carte</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="message-body" slot="list-content">
+      <!-- Cards go here -->
+    </div>
+  </section>
+</template>
+
+<!-- Template pour une carte -->
+<template id="card-template">
+  <article class="card" slot="card-id">
+    <div class="card-header">
+      <div class="card-header-title has-text-weight-medium" slot="card-content"></div>
+      <div class="card-header-icon">
+        <span class="icon has-text-success" slot="edit-card-button">
+          <i class="fas fa-pencil-alt"></i>
+          <span class="sr-only">Modifier la carte</span>
+        </span>
+        <span class="icon has-text-danger ml-2" slot="delete-card-button">
+          <i class="fas fa-trash-alt"></i>
+          <span class="sr-only">Supprimer la carte</span>
+        </span>
+      </div>
+    </div>
+  </article>
+</template>

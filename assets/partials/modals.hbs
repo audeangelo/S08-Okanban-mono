@@ -1,0 +1,160 @@
+<!-- Add a list modal -->
+<!-- (add the 'is-active' class to see it : https://bulma.io/documentation/components/modal/#javascript-implementation-example) -->
+<div class="modal" id="add-list-modal">
+  <div class="modal-background" id="modal-bg"></div>
+  <div class="modal-card">
+    <form>
+      <div class="modal-card-head">
+        <p class="modal-card-title">Ajouter une liste</p>
+        <button class="delete close" type="button" aria-label="close">
+          <span class="sr-only">Fermer la modale</span>
+        </button>
+      </div>
+
+      <div class="modal-card-body">
+        <label class="label">Nom</label>
+        <input class="input" type="text" name="name" placeholder="Nom de la liste">
+      </div>
+
+      <div class="modal-card-foot">
+        <button class="button is-success">Ajouter</button>
+        <button class="button close" type="button">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Edit a list modal -->
+<div class="modal" id="edit-list-modal">
+  <div class="modal-background" id="modal-bg"></div>
+  <div class="modal-card">
+    <form>
+      <div class="modal-card-head">
+        <p class="modal-card-title">Éditer une liste</p>
+        <button class="delete close" type="button" aria-label="close">
+          <span class="sr-only">Fermer la modale</span>
+        </button>
+      </div>
+
+      <div class="modal-card-body">
+        <div class="field">
+          <label class="label">Nom actuel</label>
+          <input class="input" type="text" name="old_name" disabled>
+        </div>
+
+        <div class="field">
+          <label class="label">Nouveau nom</label>
+          <input class="input" type="text" name="name" required>
+        </div>
+      </div>
+
+      <div class="modal-card-foot">
+        <button class="button is-success">Modifier</button>
+        <button class="button close" type="button">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Add a card modal -->
+<!-- (add the 'is-active' class to see it : https://bulma.io/documentation/components/modal/#javascript-implementation-example) -->
+<div class="modal" id="add-card-modal">
+  <div class="modal-background close"></div>
+  <div class="modal-card">
+    <form>
+      <div class="modal-card-head">
+        <p class="modal-card-title">Ajouter une carte</p>
+        <button class="delete close" type="button" aria-label="close">
+          <span class="sr-only">Fermer la modale</span>
+        </button>
+      </div>
+
+      <div class="modal-card-body">
+        <!-- <input type="hidden" name="list_id"> -->
+
+        <div class="field">
+          <label class="label">Contenu</label>
+          <input
+            class="input"
+            type="text"
+            name="content"
+            placeholder="Contenu de la carte"
+          />
+        </div>
+
+        <div class="field">
+          <label class="label">Couleur</label>
+          <input
+            class="input"
+            type="color"
+            name="color"
+            placeholder="Couleur de la carte"
+            value="#FFFFFF"
+          />
+        </div>
+      </div>
+
+      <div class="modal-card-foot">
+        <button class="button is-success">Ajouter</button>
+        <button class="button close" type="button">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Edit a card modal -->
+<div class="modal" id="edit-card-modal">
+  <div class="modal-background"></div>
+  <div class="modal-card">
+    <form>
+      <div class="modal-card-head">
+        <p class="modal-card-title">Éditer une carte</p>
+        <button class="delete close" type="button" aria-label="close">
+          <span class="sr-only">Fermer la modale</span>
+        </button>
+      </div>
+
+      <div class="modal-card-body">
+        <div class="field">
+          <label class="label">Contenu</label>
+          <input class="input" type="text" name="content">
+        </div>
+
+        <div class="field">
+          <label class="label">Couleur</label>
+          <input class="input" type="color" name="color">
+        </div>
+      </div>
+
+      <div class="modal-card-foot">
+        <button class="button is-success">Modifier</button>
+        <button class="button close" type="button">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Delete a card modal -->
+<div class="modal" id="delete-card-modal">
+  <div class="modal-background close"></div>
+  <div class="modal-card">
+    <form>
+      <div class="modal-card-head">
+        <p class="modal-card-title">Supprimer une carte</p>
+        <button class="delete close" type="button" aria-label="close">
+          <span class="sr-only">Fermer la modale</span>
+        </button>
+      </div>
+
+      <div class="modal-card-body">
+        <p>Confirmez-vous la suppression de la carte ?</p>
+        <p>Cette opération est irréversible.</p>
+      </div>
+
+      <div class="modal-card-foot">
+        <button class="button is-danger">Supprimer la carte</button>
+        <button class="button close" type="button">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>
