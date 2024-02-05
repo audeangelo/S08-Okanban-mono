@@ -207,7 +207,7 @@ nano .env
 # ^X (ie, CTRL + X) : quitter
 
 # Build le client
-npm run build
+npm run front:build
 
 # Démarrer le serveur 
 node index.js
